@@ -96,7 +96,7 @@ data:
   K8S_TOKEN_FILE: "/tmp/serviceaccount/token"
 # Containers section
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   name: config-zookeeper
@@ -146,7 +146,7 @@ spec:
         hostPath:
           path: /var/log/contrail/config-zookeeper
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   name: contrail-analyticsdb
@@ -263,7 +263,7 @@ spec:
         hostPath:
           path: /var/lib
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   name: contrail-configdb
@@ -314,7 +314,7 @@ spec:
         hostPath:
           path: /var/log/contrail/configdb
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   name: contrail-config-database-nodemgr
@@ -394,7 +394,7 @@ spec:
         hostPath:
           path: /usr/bin
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   name: contrail-analytics
@@ -494,7 +494,7 @@ spec:
         hostPath:
           path: /usr/bin
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   name: contrail-analytics-snmp
@@ -606,7 +606,7 @@ spec:
         hostPath:
           path: /usr/bin
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   name: contrail-analytics-alarm
@@ -719,7 +719,7 @@ spec:
         hostPath:
           path: /usr/bin
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   name: contrail-controller-control
@@ -840,7 +840,7 @@ spec:
         hostPath:
           path: /usr/bin
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   name: contrail-controller-config
@@ -970,7 +970,7 @@ spec:
         hostPath:
           path: /usr/bin
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   name: contrail-controller-webui
@@ -1046,7 +1046,7 @@ spec:
         hostPath:
           path: /usr/bin
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   name: redis
@@ -1091,7 +1091,7 @@ spec:
         hostPath:
           path: /var/log/contrail/redis
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   name: rabbitmq
@@ -1146,7 +1146,7 @@ spec:
         hostPath:
           path: /var/log/contrail/rabbitmq
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   name: contrail-kube-manager
@@ -1219,7 +1219,7 @@ spec:
         hostPath:
           path: /usr/bin
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   name: contrail-agent
